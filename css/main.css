@@ -1,0 +1,47 @@
+html{
+    background: grey;
+}
+input{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    font-size: 30px;
+    width: 340px;
+    display: block;
+    background: grey;
+}
+input:hover{
+    
+}
+a{
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+label{
+    font-size: 25px;
+    color: #ffb;
+    margin-top: 22px;
+    display: block;
+}
+.button{
+    background: #ff8;;
+    padding: 15px;
+    margin-left: 262px;
+    margin-top: 30px;
+    border-radius: 8px;
+}
+a:hover,
+a:focus,
+a:active{
+    text-decoration: none;
+}
+a:hover{
+    color: #ffb;
+}
+.form1{
+    transition: .5s;
+}
+.last{
+    margin-bottom: 30px;
+}

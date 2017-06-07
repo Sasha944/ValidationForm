@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div>
+    <a href="#" id = "button1" style="display: none">Go back</a>
+        <a href="#"  id="button2" >Next</a>
+</div>
+<div class="form1" style="display: inline-block;margin-right: 60px" id="formAction1">
+<form action="">
+    <label for="fname">
+    Ваше імя
+    <input type="text" id="fname">
+</label>
+    <label for="secName">
+        Ваша фамлія
+        <input type="text" id="secName">
+    </label>
+    <label for="femail">
+        Ваш email
+        <input type="email" id="femail">
+    </label>
+    <label for="fpass" class="last">
+        Ваш пароль
+        <input type="password" id="fpass">
+    </label>
+    <a href="#" class="button">Send</a>
+</form>
+</div>
+<div class="form2" style="display: none;" id="formAction2">
+    <form action="" id="secForm">
+        <label for="fnum">
+            Ваш номер телефону
+            <input type="text" id="fnum">
+        </label>
+        <label for="fcity">
+            Ваше місто проживання
+            <input type="text" id="fcity">
+        </label>
+        <label for="femail2" class="last">
+            Вкажіть запасний емейл
+            <input type="email" id="femail2">
+        </label>
+        <a href="#" class="button">Send</a>
+    </form>
+</div>
+<script>
+var formMain = document.getElementById("formAction1");
+var formLast = document.getElementById("formAction2");
+var firstButton = document.getElementById("button1");
+var secondButton = document.getElementById("button2");
+var secForm = document.getElementById("secForm");
+
+secondButton.addEventListener("click",function(e){
+   if(e.target===secondButton){
+       formMain.style.display = "none";
+       secForm.style.display = "block";
+       firstButton.style.display = "inline-block";
+       formLast.style.display = "block";
+       secondButton.style.display = "none";
+   }
+});
+firstButton.addEventListener("click", function(e){
+    if(e.target===firstButton){
+        formMain.style.display = "block";
+        secForm.style.display = "none";
+        secondButton.style.display = "inline-block";
+        firstButton.style.display = "none";
+    }
+})
+
+
+
+</script>
+</body>
+</html>
